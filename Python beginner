@@ -1,0 +1,16 @@
+num1 = int(input ("Choose a number? "))
+num2 = int(input ("Choose another number? "))
+math = input( "Are you adding,subtracting,multiplying or dividing? ")
+
+if math == "adding":
+    print(num1+num2)
+elif math == "subtracting":
+    print(num1-num2)
+elif math== "multiplying":
+    print(num1 *num2)
+elif math== "dividing":
+    print(num1/num2)
+else: print("Opps Buddy!")
+print("Thank you for your cooperation")
+
+
