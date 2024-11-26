@@ -1,0 +1,14 @@
+price = int(input("Tell me,what's the original price of the item? "))
+discount_percent= int(input("And how much was the discount? "))
+
+def calculate_discount(price,discount_percent):
+    return price * discount_percent*0.01
+
+if discount_percent >= 20 :
+    print("Here is the final price: ", calculate_discount(price,discount_percent))
+else:
+    print("Sorry, No discount today.Final price: ",price)
+
+
+
+
