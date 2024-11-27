@@ -1,0 +1,21 @@
+Message= input("What would you want to add in this file?")
+with open("sample.txt","a") as file:
+    file.write(Message)
+with open("sample.txt","r") as file:
+    data=file.read()
+    print(data)
+
+Qsn= input("Which file do you want to open?")
+
+try:
+    with open(Qsn,"r") as file:
+         data = file.read()
+         print(data)
+except FileNotFoundError:
+    print("Opps!We can't find that file.Please check filename")
+finally:
+    print("Thank you for using our services")
+
+
+
+
