@@ -1,0 +1,79 @@
+#Assignment 1
+
+class Bank:
+    def __init__(self,name,age,year_opened,account_number,balance):
+        self.name=name
+        self.age=age
+        self.year_opened=year_opened
+        self.__account_number=account_number
+        self.__balance=balance
+
+    def deposit(self,amount):
+        self.__balance += amount
+
+    def withdraw(self,amount):
+        if amount<self.__balance:
+            self.__balance -=amount
+        else:
+            print("You have insufficient funds!Top up to make the withdrawal")
+        
+    def get_balance(self):
+        print("Account balance is: ",self.__balance)
+
+p =Bank("Ryan","19", "2002","393072",300000)
+p2 =Bank("Diana","42","2022","560000045",45000)
+
+
+p2.withdraw(2000)
+p2.get_balance()
+
+
+
+#Assignment 2
+class Animal:
+    def __init__(self,name,age,colour):
+        self.name=name
+        self.age=age
+        self.colour=colour
+
+    def about_me(self):
+        print(f"My name is {self.name} .I am {self.age} years old.My colour is {self.colour}")
+
+    def speak(self):
+        print("I don't know what to say")
+
+class cat(Animal):
+    def speak(self):
+        print("Meaoww")
+
+class dog(Animal):
+    def speak(self):
+        print("Woof! Woof!")
+
+class snake(Animal):
+    def speak(self):
+        print("Hsssss")
+
+class lion(Animal):
+    def speak(self):
+        print("Rwoooaaarrwww")
+
+c=cat("Garry",4,"Brown")
+c.about_me
+c.speak()
+
+d=dog("Loafy",10,"White")
+d.about_me()
+d.speak()
+
+s=snake("Sisera",6,"Gold")
+s.about_me()
+s.speak()
+
+l=lion("Matata",20,"Red-Brown")
+l.about_me()
+l.speak()
+
+f=Animal("Collo", 2,"Orange")
+f.about_me()
+f.speak()
